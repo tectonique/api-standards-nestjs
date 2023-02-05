@@ -2,12 +2,27 @@
   "name": "@tectonique/api-standards-nestjs",
   "repository": "https://github.com/tectonique/api-standards-nestjs",
   "description": "API Standards for NestJS. API envelopes, Problem Details and data validation/sanitizing with Zod.",
-  "keywords": ["nest.js", "nestjs", "nest", "validation", "zod", "typesafety", "envelope", "api", "problemdetails", "rfc7807", "7807"],
+  "keywords": [
+    "nest.js",
+    "nestjs",
+    "nest",
+    "validation",
+    "zod",
+    "typesafety",
+    "envelope",
+    "api",
+    "problemdetails",
+    "rfc7807",
+    "7807"
+  ],
   "author": {
-    "name" : "Peter Kuhmann",
-    "email" : "peter@hedgehogs-mind.com"
+    "name": "Peter Kuhmann",
+    "email": "peter@hedgehogs-mind.com"
   },
   "version": "0.0.1",
+  "publishConfig": {
+    "access": "public"
+  },
   "types": "dist/mjs/index.d.ts",
   "main": "dist/cjs/index.js",
   "module": "dist/mjs/index.js",
@@ -26,6 +41,9 @@
     "dev": "tsx demo.ts"
   },
   "devDependencies": {
+    "@nestjs/common": "8.0.0",
+    "@nestjs/core": "8.0.0",
+    "@types/express": "^4.17.17",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.6.0",
@@ -36,7 +54,24 @@
     "eslint-plugin-promise": "^6.0.0",
     "prettier": "^2.8.3",
     "rimraf": "^4.1.2",
+    "rxjs": "^7.8.0",
     "tsx": "^3.12.2",
     "typescript": "*"
+  },
+  "dependencies": {
+    "@tectonique/api-standards": "^0.0.13",
+    "zod": "^3.20.2"
+  },
+  "peerDependencies": {
+    "@nestjs/common": ">= 8.0.0",
+    "@nestjs/core": ">= 8.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@nestjs/common": {
+      "optional": true
+    },
+    "@nestjs/core": {
+      "optional": true
+    }
   }
 }
