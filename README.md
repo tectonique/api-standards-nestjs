@@ -19,14 +19,12 @@ Additionally, this library provides low barrier validation mechanisms powered by
 # 📖 Table of contents
 
 <!-- TOC -->
-* [🌩 API Standards](#-api-standards)
+* [🌩 API Standards – NestJS](#-api-standards--nestjs)
 * [📖 Table of contents](#-table-of-contents)
 * [📦 NPM Package](#-npm-package)
 * [💾 Installation](#-installation)
 * [🏁 Goal](#-goal)
 * [📑 Documentation](#-documentation)
-    * [⚠️ Problem Details](#-problem-details)
-    * [📨 Response Envelopes](#-response-envelopes)
 * [📜 Changelog](#-changelog)
 * [🦔 Author](#-author)
 <!-- TOC -->
