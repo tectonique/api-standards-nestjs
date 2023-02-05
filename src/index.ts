@@ -5,6 +5,7 @@ import { useZodValidationAndErrorHandling } from "./Validation";
 
 export * from "./types";
 export * from "./Envelopes";
+export * from "./Validation";
 
 export function useApiStandards(
   app: INestApplication,
