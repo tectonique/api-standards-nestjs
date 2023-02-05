@@ -4,9 +4,11 @@
   <img src=".assets/logo.png" alt="Logo of library api-standards" width="500">
   <br>
   <br>
-  It's the NestJS superset
+  It's the NestJS superset of
   <a href="https://github.com/tectonique/api-standards">tectonique/api-standards 🔗</a>
   including ready to use data validation mechanism etc.
+  <br>
+  <br>
 </p>
 
 # 🌩 API Standards – NestJS
