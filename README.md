@@ -47,7 +47,7 @@ Using yarn:
 yarn add @tectonique/api-standards-nestjs
 ```
 
-To install all components, do use `useApiStandards(app)`:
+To install all components use `useApiStandards(app)`:
 
 ```typescript
 import { useApiStandards } from '@tectonique/api-standards-nestjs';
