@@ -6,6 +6,7 @@
 * [📜 Changelog](#-changelog)
 * [📖 Table of contents](#-table-of-contents)
 * [0.x.y](#0xy)
+  * [0.0.7](#007)
   * [0.0.6](#006)
   * [0.0.5](#005)
   * [0.0.4](#004)
@@ -15,6 +16,9 @@
 <!-- TOC -->
 
 # 0.x.y
+
+## 0.0.7
+- Added logging capabilities to ProblemDetailHandlingExceptionFilter > 5xx errors are now logged.
 
 ## 0.0.6
 - Response schema powered data validation and transformation
