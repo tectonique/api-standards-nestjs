@@ -6,6 +6,7 @@
 * [📜 Changelog](#-changelog)
 * [📖 Table of contents](#-table-of-contents)
 * [0.x.y](#0xy)
+  * [0.0.8](#008)
   * [0.0.7](#007)
   * [0.0.6](#006)
   * [0.0.5](#005)
