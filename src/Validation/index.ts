@@ -1,14 +1,22 @@
 import { INestApplication } from "@nestjs/common";
-import ZodValidationPipeline from "./ZodValidationPipeline";
+import ZodValidationPipe from "./ZodValidationPipe";
 import ZodErrorToProblemDetailInterceptor from "./ZodErrorToProblemDetailInterceptor";
+import ZodResponseSchemaInterceptor from "./ZodResponseSchemaInterceptor";
 
-export * from "./types";
-export * from "./defaultProblemDetail";
+export * from "./consts";
+export * from "./decorators";
+export * from "./defaults";
 export * from "./functions";
-export { default as ZodErrorToProblemDetailInterceptor } from "./ZodErrorToProblemDetailInterceptor";
-export { default as ZodValidationPipeline } from "./ZodValidationPipeline";
+export * from "./types";
 
-export function useZodValidationAndErrorHandling(app: INestApplication) {
+export { default as ZodErrorToProblemDetailInterceptor } from "./ZodErrorToProblemDetailInterceptor";
+export { default as ZodValidationPipe } from "./ZodValidationPipe";
+export { default as ZodResponseSchemaInterceptor } from "./ZodResponseSchemaInterceptor";
+
+export function useZodPoweredDataValidationAndTransformation(
+  app: INestApplication
+) {
   app.useGlobalInterceptors(new ZodErrorToProblemDetailInterceptor());
-  app.useGlobalPipes(new ZodValidationPipeline());
+  app.useGlobalPipes(new ZodValidationPipe());
+  app.useGlobalInterceptors(new ZodResponseSchemaInterceptor());
 }

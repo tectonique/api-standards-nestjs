@@ -6,6 +6,7 @@
 * [📜 Changelog](#-changelog)
 * [📖 Table of contents](#-table-of-contents)
 * [0.x.y](#0xy)
+  * [0.0.6](#006)
   * [0.0.5](#005)
   * [0.0.4](#004)
   * [0.0.3](#003)
@@ -14,6 +15,10 @@
 <!-- TOC -->
 
 # 0.x.y
+
+## 0.0.6
+- Response schema powered data validation and transformation
+- Extended validation docs
 
 ## 0.0.5
 - Docs typos

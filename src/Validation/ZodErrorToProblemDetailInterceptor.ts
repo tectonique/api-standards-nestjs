@@ -1,7 +1,7 @@
 import { CallHandler, ExecutionContext, NestInterceptor } from "@nestjs/common";
 import { catchError, Observable } from "rxjs";
 import { ZodError } from "zod";
-import { ZodValidationProblemDetail } from "./defaultProblemDetail";
+import { ZodValidationProblemDetail } from "./defaults";
 
 export default class ZodErrorToProblemDetailInterceptor
   implements NestInterceptor

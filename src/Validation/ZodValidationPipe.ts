@@ -1,7 +1,7 @@
 import { ArgumentMetadata, PipeTransform } from "@nestjs/common";
 import { ValidatableZodDto } from "./types";
 
-export default class ZodValidationPipeline implements PipeTransform {
+export default class ZodValidationPipe implements PipeTransform {
   transform(value: any, metadata: ArgumentMetadata): any {
     const zodDto = metadata.metatype as ValidatableZodDto<any>;
 

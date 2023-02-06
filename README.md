@@ -74,7 +74,9 @@ The goal of the library is to help you create:
 
 Check out the following examples:
 - [Frontend: 100% type safe api calls thanks to envelopes](./src/Envelopes/README.md#-type-safe-api-calls)
-- [Backend: Validated request bodies](./src/Validation/README.md#-validated-request-bodies)
+- [Backend: Validated query parameters](./src/Validation/README.md#-query-parameters-schema)
+- [Backend: Validated request bodies](./src/Validation/README.md#-request-body-schema)
+- [Backend: Sanitized endpoint responses](./src/Validation/README.md#-response-schema)
 
 # 📑 Documentation
 

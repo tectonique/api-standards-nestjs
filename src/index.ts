@@ -1,7 +1,7 @@
 import { INestApplication } from "@nestjs/common";
 import { FallbackInternalServerProblemDetailGenerator } from "./types";
 import { useEnvelopeAndProblemDetailHandlers } from "./Envelopes";
-import { useZodValidationAndErrorHandling } from "./Validation";
+import { useZodPoweredDataValidationAndTransformation } from "./Validation";
 
 export * from "./types";
 export * from "./Envelopes";
@@ -16,5 +16,5 @@ export function useApiStandards(
     fallbackInternalServerProblemDetailGenerator
   );
 
-  useZodValidationAndErrorHandling(app);
+  useZodPoweredDataValidationAndTransformation(app);
 }
