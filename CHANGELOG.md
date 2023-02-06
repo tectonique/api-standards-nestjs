@@ -17,6 +17,9 @@
 
 # 0.x.y
 
+## 0.0.8
+- Changed `@ResponseSchema(schema)` check to sync one for now.
+
 ## 0.0.7
 - Added logging capabilities to ProblemDetailHandlingExceptionFilter > 5xx errors are now logged.
 

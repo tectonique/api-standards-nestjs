@@ -18,10 +18,8 @@ export default class ZodResponseSchemaInterceptor implements NestInterceptor {
 
     if (zodResponseSchema) {
       return next.handle().pipe(
-        map(async (handlerResponse) => {
-          const parseResult = await zodResponseSchema.safeParseAsync(
-            handlerResponse
-          );
+        map((handlerResponse) => {
+          const parseResult = zodResponseSchema.safeParse(handlerResponse);
 
           // The ZodErrorToProblemDetailInterceptor will take of that.
           if (!parseResult.success) {
