@@ -6,6 +6,7 @@
 * [📜 Changelog](#-changelog)
 * [📖 Table of contents](#-table-of-contents)
 * [0.x.y](#0xy)
+  * [0.0.16](#0016)
   * [0.0.15](#0015)
   * [0.0.14](#0014)
   * [0.0.13](#0013)
@@ -24,6 +25,9 @@
 <!-- TOC -->
 
 # 0.x.y
+
+## 0.0.16
+- Correct dist/
 
 ## 0.0.15
 - Improved error logging.
