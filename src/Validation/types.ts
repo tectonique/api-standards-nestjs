@@ -15,8 +15,9 @@ export type ValidatableZodDto<DATA> = {
   __zodType: ZodType;
 };
 
-export type QueryType<ZOD_TYPE extends ZodType> = z.infer<ZOD_TYPE>;
+export type ApiQueryType<ZOD_TYPE extends ZodType> = z.input<ZOD_TYPE>;
 
-export type BodyType<ZOD_TYPE extends ZodType> = z.infer<ZOD_TYPE>;
+export type ApiBodyType<ZOD_TYPE extends ZodType> = z.input<ZOD_TYPE>;
 
-export type ResponseType<ZOD_TYPE extends ZodType> = z.input<ZOD_TYPE>;
+export type InternalEndpointResponseType<ZOD_TYPE extends ZodType> =
+  z.input<ZOD_TYPE>;
