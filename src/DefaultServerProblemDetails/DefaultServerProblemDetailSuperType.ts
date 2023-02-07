@@ -5,4 +5,4 @@ type DefaultServerProblemDetailSuperType = ProblemDetails.infer<
   typeof DefaultServerProblemDetailsCollection
 >;
 
-export default DefaultServerProblemDetailsCollection;
+export default DefaultServerProblemDetailSuperType;
