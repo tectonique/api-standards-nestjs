@@ -1,5 +1,6 @@
 import { ArgumentMetadata, PipeTransform } from "@nestjs/common";
 import { ValidatableZodDto } from "./types";
+import { ZodInputValidationProblemDetail } from "../DefaultServerProblemDetails";
 
 export default class ZodValidationPipe implements PipeTransform {
   transform(value: any, metadata: ArgumentMetadata): any {
@@ -9,7 +10,7 @@ export default class ZodValidationPipe implements PipeTransform {
       const parseResult = zodDto.__zodType.safeParse(value);
 
       if (!parseResult.success) {
-        throw parseResult.error;
+        throw ZodInputValidationProblemDetail(parseResult.error);
       }
 
       return parseResult.data;

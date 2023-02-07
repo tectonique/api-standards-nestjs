@@ -5,7 +5,6 @@ import ZodResponseSchemaInterceptor from "./ZodResponseSchemaInterceptor";
 
 export * from "./consts";
 export * from "./decorators";
-export * from "./defaults";
 export * from "./functions";
 export * from "./types";
 

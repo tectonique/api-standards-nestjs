@@ -6,6 +6,7 @@
 * [📜 Changelog](#-changelog)
 * [📖 Table of contents](#-table-of-contents)
 * [0.x.y](#0xy)
+  * [0.0.9](#009)
   * [0.0.8](#008)
   * [0.0.7](#007)
   * [0.0.6](#006)
@@ -17,6 +18,17 @@
 <!-- TOC -->
 
 # 0.x.y
+
+## 0.0.9
+- Created default problem details collection.
+  - Exports ZodValidationProblemDetail.
+  - Exports InternalServerErrorProblemDetail.
+  - Exports DefaultServerProblemDetailsCollection.
+  - Exports DefaultServerProblemDetailSuperType.
+- `useApiStandards(app)` does not require fallback internal server problem detail generator anymore.
+- `ZodValidation` now directly throws `ZodInputValidationProblemDetail` (only one that exposes error messages).
+- `@ResponseSchema()` validation failures now cause a separate `ResponseSchemaValidationProblemDetail` to be thrown.
+- All other ZodErrors now cause a `ZodInternalValidationErrorProblemDetail` to be thrown.
 
 ## 0.0.8
 - Changed `@ResponseSchema(schema)` check to sync one for now.

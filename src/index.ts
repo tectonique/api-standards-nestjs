@@ -1,20 +1,12 @@
 import { INestApplication } from "@nestjs/common";
-import { FallbackInternalServerProblemDetailGenerator } from "./types";
 import { useEnvelopeAndProblemDetailHandlers } from "./Envelopes";
 import { useZodPoweredDataValidationAndTransformation } from "./Validation";
 
-export * from "./types";
+export * from "./DefaultServerProblemDetails";
 export * from "./Envelopes";
 export * from "./Validation";
 
-export function useApiStandards(
-  app: INestApplication,
-  fallbackInternalServerProblemDetailGenerator: FallbackInternalServerProblemDetailGenerator
-) {
-  useEnvelopeAndProblemDetailHandlers(
-    app,
-    fallbackInternalServerProblemDetailGenerator
-  );
-
+export function useApiStandards(app: INestApplication) {
+  useEnvelopeAndProblemDetailHandlers(app);
   useZodPoweredDataValidationAndTransformation(app);
 }

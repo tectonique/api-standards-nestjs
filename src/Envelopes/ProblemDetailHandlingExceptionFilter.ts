@@ -7,7 +7,7 @@ import {
 } from "@nestjs/common";
 import { BaseExceptionFilter } from "@nestjs/core";
 import { ProblemDetails } from "@tectonique/api-standards";
-import { FallbackInternalServerProblemDetailGenerator } from "../types";
+import { InternalServerProblemDetail } from "../DefaultServerProblemDetails";
 
 function problemDetailToHttpException<
   STATUS extends number,
@@ -29,10 +29,7 @@ export default class ProblemDetailHandlingExceptionFilter extends BaseExceptionF
     ProblemDetailHandlingExceptionFilter.name
   );
 
-  constructor(
-    applicationRef: HttpServer,
-    private readonly fallbackInternalServerProblemDetailGenerator: FallbackInternalServerProblemDetailGenerator
-  ) {
+  constructor(applicationRef: HttpServer) {
     super(applicationRef);
   }
 
@@ -65,7 +62,7 @@ export default class ProblemDetailHandlingExceptionFilter extends BaseExceptionF
       });
     }
 
-    return this.fallbackInternalServerProblemDetailGenerator();
+    return InternalServerProblemDetail();
   }
 
   private logProblemDetail<
