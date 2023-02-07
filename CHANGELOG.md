@@ -6,6 +6,7 @@
 * [📜 Changelog](#-changelog)
 * [📖 Table of contents](#-table-of-contents)
 * [0.x.y](#0xy)
+  * [0.0.14](#0014)
   * [0.0.13](#0013)
   * [0.0.12](#0012)
   * [0.0.11](#0011)
@@ -22,6 +23,10 @@
 <!-- TOC -->
 
 # 0.x.y
+
+## 0.0.14
+- Added `ApiResponseType`
+- Renamed `InternalEndpointResponseType` to `EndpointResponseType`
 
 ## 0.0.13
 - Changed body and query utility type to use z.input.

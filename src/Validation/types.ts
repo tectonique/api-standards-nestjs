@@ -19,5 +19,6 @@ export type ApiQueryType<ZOD_TYPE extends ZodType> = z.input<ZOD_TYPE>;
 
 export type ApiBodyType<ZOD_TYPE extends ZodType> = z.input<ZOD_TYPE>;
 
-export type InternalEndpointResponseType<ZOD_TYPE extends ZodType> =
-  z.input<ZOD_TYPE>;
+export type ApiResponseType<ZOD_TYPE extends ZodType> = z.output<ZOD_TYPE>;
+
+export type EndpointResponseType<ZOD_TYPE extends ZodType> = z.input<ZOD_TYPE>;
