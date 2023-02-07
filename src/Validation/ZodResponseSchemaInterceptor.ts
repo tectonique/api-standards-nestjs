@@ -39,7 +39,7 @@ export default class ZodResponseSchemaInterceptor implements NestInterceptor {
               `- Handler = ${context.getHandler().name}\n\n` +
               `Zod error:\n${JSON.stringify(condensedError, null, 4)}`;
 
-            this.logger.error(message);
+            this.logger.error(message, "");
 
             throw ZodResponseSchemaValidationProblemDetail();
           }

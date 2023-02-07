@@ -77,13 +77,13 @@ export default class ProblemDetailHandlingExceptionFilter extends BaseExceptionF
       let message = "5xx Problem Detail occurred:\n\n";
       message += JSON.stringify(problemDetail, null, 4);
 
-      if (cause && cause !== problemDetail) {
+      if (cause && !cause.stack && cause !== problemDetail) {
         message += "\n\nCause:\n\n";
         message +=
           typeof cause.toString === "function" ? cause.toString() : cause;
       }
 
-      this.logger.error(message);
+      this.logger.error(message, cause.stack ?? "");
     }
   }
 }
