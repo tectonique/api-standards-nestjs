@@ -75,13 +75,17 @@ Here is an example:
 ```typescript
 import {UserNotFoundProblemDetail} from "@myProblemDetails"
 import {z} from "zod"
-import {createDtoFromZodSchema} from "./functions";
+import {createDtoFromZodSchema, QueryType} from "@tectonique/api-standards-nestjs";
 
 const API_GetUser_Query_Schema = z.object({
   email: z.string().email()
 })
 
-const API_GetUser_Query_DTO = createDtoFromZodSchema(API_GetUser_Query_Schema)
+class API_GetUser_Query_DTO extends createDtoFromZodSchema(API_GetUser_Query_Schema) {
+}
+
+// Can be used on the frontend side.
+type API_GetUser_Query_Type = QueryType<typeof API_GetUser_Query_Schema>
 
 type API_GetUser_Response = {
   email: string,
@@ -92,7 +96,7 @@ type API_GetUser_Response = {
 export class UserController {
   @Get(":email")
   public getUser(
-      @Query() query: API_GetUser_Query_DTO
+          @Query() query: API_GetUser_Query_DTO
   ): API_GetUser_Response {
     if (query.email === "theo@testing.com") {
       return {
@@ -119,7 +123,7 @@ Here is an example:
 ```typescript
 import {UserNotFoundProblemDetail} from "@myProblemDetails"
 import {z} from "zod"
-import {createDtoFromZodSchema} from "./functions";
+import {createDtoFromZodSchema, BodyType} from "@tectonique/api-standards-nestjs";
 
 const API_CreateUser_Request_Schema = z.object({
   email: z.string().email().trim(),
@@ -127,6 +131,9 @@ const API_CreateUser_Request_Schema = z.object({
 })
 
 const API_CreateUser_Request_DTO = createDtoFromZodSchema(API_CreateUser_Request_Schema)
+
+// Can be used on the frontend side.
+type API_CreateUser_Request_Type = BodyType<typeof API_CreateUser_Request_Schema>
 
 const users : { email: string, name: string }[] = []
 
@@ -158,7 +165,7 @@ Again
 Here is an example:
 
 ```typescript
-import {ResponseSchema} from "./decorators";
+import {ResponseSchema, ResponseType} from "@tectonique/api-standards-nestjs";
 
 const API_GetUsers_Schema = z.array(
   z.object({
@@ -167,7 +174,7 @@ const API_GetUsers_Schema = z.array(
   })
 )
 
-type API_GetUsers_Response = z.infer<typeof API_GetUsers_Schema>
+type API_GetUsers_Response = ResponseType<typeof API_GetUsers_Schema>
 
 @Controller("users")
 export class UserController {

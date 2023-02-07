@@ -6,6 +6,7 @@
 * [📜 Changelog](#-changelog)
 * [📖 Table of contents](#-table-of-contents)
 * [0.x.y](#0xy)
+  * [0.0.10](#0010)
   * [0.0.9](#009)
   * [0.0.8](#008)
   * [0.0.7](#007)
@@ -18,6 +19,12 @@
 <!-- TOC -->
 
 # 0.x.y
+
+## 0.0.10
+- Added utility types for correctly getting query, body and response types:
+  - `QueryType<ZOD_TYPE>`
+  - `BodyType<ZOD_TYPE>`
+  - `ResponseType<ZOD_TYPE>`
 
 ## 0.0.9
 - Created default problem details collection.
