@@ -19,6 +19,7 @@ advocated by the base library [tectonique/api-standards 🔗](https://github.com
   * [✅ Success envelopes](#-success-envelopes)
   * [⚠️ Problem Detail responses](#-problem-detail-responses)
   * [💠 Type safe API calls](#-type-safe-api-calls)
+  * [✋ Disable envelope wrapping](#-disable-envelope-wrapping)
 <!-- TOC -->
 
 # 💾 Installation
@@ -211,3 +212,9 @@ if ( ResponseEnvelopes.isEnvelope(data) ) {
 ```
 
 Isn't that fantastic? 😍
+
+## ✋ Disable envelope wrapping
+You may need an endpoint that renders a Handlebars view. In this case you don't want to get an envelope.
+
+In order to disable envelope wrapping, just decorate your controller class
+or endpoint method with `@SkipEnvelopeWrapping()`.
