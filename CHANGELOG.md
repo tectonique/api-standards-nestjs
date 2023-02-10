@@ -6,6 +6,7 @@
 * [📜 Changelog](#-changelog)
 * [📖 Table of contents](#-table-of-contents)
 * [0.x.y](#0xy)
+  * [0.0.18](#0018)
   * [0.0.17](#0017)
   * [0.0.16](#0016)
   * [0.0.15](#0015)
@@ -26,6 +27,9 @@
 <!-- TOC -->
 
 # 0.x.y
+
+## 0.0.18
+- Set correct content type for problem details ("application/json+problem").
 
 ## 0.0.17
 - Added decorator to skip envelope wrapping.

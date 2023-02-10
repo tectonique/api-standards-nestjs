@@ -8,6 +8,7 @@ import {
 import { BaseExceptionFilter } from "@nestjs/core";
 import { ProblemDetails } from "@tectonique/api-standards";
 import { InternalServerProblemDetail } from "../DefaultServerProblemDetails";
+import { Response } from "express";
 
 function problemDetailToHttpException<
   STATUS extends number,
@@ -37,6 +38,11 @@ export default class ProblemDetailHandlingExceptionFilter extends BaseExceptionF
     const problemDetail = this.toProblemDetail(exception);
 
     this.logProblemDetail(problemDetail, exception);
+
+    (host.switchToHttp().getResponse() as Response).header(
+      "Content-Type",
+      "application/json+problem"
+    );
 
     return super.catch(problemDetailToHttpException(problemDetail), host);
   }
