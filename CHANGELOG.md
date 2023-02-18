@@ -6,6 +6,8 @@
 * [📜 Changelog](#-changelog)
 * [📖 Table of contents](#-table-of-contents)
 * [0.x.y](#0xy)
+  * [0.0.20](#0020)
+  * [0.0.19](#0019)
   * [0.0.18](#0018)
   * [0.0.17](#0017)
   * [0.0.16](#0016)
@@ -27,6 +29,9 @@
 <!-- TOC -->
 
 # 0.x.y
+
+## 0.0.20
+- Fixed changelog
 
 ## 0.0.19
 - Bumped version of `@tectonique/api-standards` to `^1.0.0`
