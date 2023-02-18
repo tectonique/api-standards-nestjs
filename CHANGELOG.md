@@ -28,6 +28,9 @@
 
 # 0.x.y
 
+## 0.0.19
+- Bumped version of `@tectonique/api-standards` to `^1.0.0`
+
 ## 0.0.18
 - Set correct content type for problem details ("application/json+problem").
 
